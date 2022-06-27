@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./img/keyboard.png">
+    <title>Speed typing</title>
+
+</head>
+<body>
+    <header>
+        <div class = "header-title">
+            <h2 id="navbar-title"><a href="#">key-road</a></h2>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Settings</a></li>
+                <li><a  href="./about.html">About</a></li>
+                <li><a data-modal-target="#modal" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body_game">
+        <div class="results-sector">
+            <h2 class="sector-text" id="speed-text-sign">Speed w/s</h2>
+            <div class="sector">
+                <div class="sector-content" id="speed">--</div>
+            </div>
+        </div>
+
+        <div class="upper-info">
+            <div class="sector" id="timer-sector">
+            <div class="sector-content" id="timer"></div>
+            <h2 class="sector-text">Timer</h2>
+            </div>
+            <div class="sector">
+                <div class="sector-content" id="key">?</div>
+                <h2 class="sector-text">Key Used</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="quote-display" id="quoteDisplay">Loading quote...</div>
+            <textarea id="quoteInput" 
+            placeholder="Type as fast as you can..."
+            class="quote-input"></textarea>
+        </div>
+
+        <div class="bottom-buttons">
+            <button id="pause-button" class="button">
+                P a u s e
+            </button>
+            <button id="restart-button" class="button">
+                R e s t a r t
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Welcome to the <i>key-road</i></div>
+            
+        </div>
+        <div class="modal-body">
+            <p>There is only one rule:</p>
+            <p>1) Type as fast as you can</p>   
+        </div>
+        <button data-close-button class="close-button" id="start-game-button">Start the game</button>
+    </div>
+    <div id="overlay"></div>
+    
+</body>
+</html>

@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Open+Sans:wght@300;400;600&family=Raleway:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body_game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 111px);
+  margin: 0;
+  background-color: #fee9e1;
+}
+
+body {
+  font-family: "Open Sans";
+}
+
+.container {
+  background-color: #e8b8b8;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 700px;
+  max-width: 90%;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+#speed-text-sign {
+  text-shadow: 3px 2px 3px rgba(61, 61, 61, 0.69);
+}
+
+.upper-info {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.results-sector {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f0ab4f;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 170px;
+}
+
+.sector-content {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+}
+
+.sector-text {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  margin-top: -10px;
+}
+
+.bottom-buttons {
+  margin-top: 20px;
+}
+
+.button {
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background: #f0ab4f;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 175px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-style: italic;
+}
+
+.button:hover {
+  background: #fbabaf;
+}
+
+.quote-display {
+  margin-bottom: 1rem;
+  margin-left: calc(1rem + 2px);
+  margin-right: calc(1rem + 2px);
+}
+
+.quote-input {
+  border: 2px solid gray;
+  outline: none;
+  width: 100%;
+  height: 10rem;
+  margin: auto;
+  resize: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.quote-input:focus {
+  border-color: black;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* navbar style */
+.keyboard_img {
+  height: 30px;
+  width: 50px;
+}
+
+#navbar-title > a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+}
+
+#navbar-title > a::selection {
+  color: white;
+}
+
+li,
+a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #538083;
+  width: 100%;
+  padding: 30px 10%;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+}
+
+.nav_links li {
+  display: inline block;
+  padding: 0 20px;
+}
+
+.nav_links li a {
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #f0ab4f;
+}
+
+/*  */
+/* Modal About */
+/*  */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 99990;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+  overflow: hidden;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  display: inline-block;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal-header {
+  padding: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: solid 1px black;
+}
+
+.modal-body {
+  padding: 20px;
+  padding-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-body > p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  width: 100%;
+  padding: 0;
+  height: 60px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  background: #f0ab4f;
+  border: none;
+  border-top: solid 1px black;
+}
+
+.close-button:hover {
+  color: white;
+  background: #f0a500;
+}

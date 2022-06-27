@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="./img/keyboard.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-contact.css">
+</head>
+<body>
+    <header>
+        <div class = "header-title">
+            <h2 id="navbar-title"><a href="./index.html">key-road</a></h2>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Settings</a></li>
+                <li><a data-modal-target="#modal" href="./about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body_game">
+        <div class="box">
+            <img src="./img/profile.jpg" alt="">
+            <div>
+                <p class="user-name">Andre Pena</p>
+                <p class="skill">Front -End Developer</p>
+            </div>
+            <div class="arr-container">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="left-container off">
+                <p>Skills</p>
+                <div class="skills">
+                    <div>Html</div>
+                    <div>Css</div>
+                    <div>React</div>
+                    <div>Node Js</div>
+                </div>
+                <div class="icons">
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <div class="cancel">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const clc = document.querySelector(".cancel");
+        const arr = document.querySelector(".arr-container");
+        const left_container = document.querySelector(".left-container");
+
+        arr.addEventListener("click", () => {
+            arr.classList.add("active-arr");
+            if(left_container.classList.contains("off")){
+                left_container.classList.remove("off");
+                left_container.classList.add("active");
+            }
+        })
+
+        clc.addEventListener("click", () => {
+            arr.classList.remove("active-arr");
+            if(left_container.classList.contains("active")){
+                left_container.classList.remove("active");
+                left_container.classList.add("off");
+            }
+        })
+    </script>
+</body>
+</html>
